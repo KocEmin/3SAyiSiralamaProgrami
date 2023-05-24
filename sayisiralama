@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class RakamSiralama {
+    public static void main(String[] args) {
+        int a, b, c;
+
+        Scanner girdi = new Scanner(System.in);
+        System.out.println("Sıralamak istediğiniz sayıları aşağıya giriniz");
+        System.out.print("1. Rakam :");
+        a = girdi.nextInt();
+
+        System.out.print("2. Rakam :");
+        b = girdi.nextInt();
+
+        System.out.print("3. Rakam :");
+        c = girdi.nextInt();
+
+        if (a > b && a > c && b > c) {
+            System.out.print("Sıralama : a > b > c");
+        } else if (a > b && a > c && c > b) {
+            System.out.print("Sıralama : a > c > b");
+
+        } else if (b > a && b > c && a > c) {
+            System.out.print("Sıralama : b > a > c");
+        } else if (b > a && b > c && c > a) {
+            System.out.print("Sıralama : b > c > a");
+
+        } else if (c > a && c > b && a > b) {
+            System.out.print("Sıralama : c > a > b");
+        } else {
+            System.out.print("Sıralama : c > b > a");
+        }
+
+    }
+}
